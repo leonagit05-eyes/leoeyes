@@ -1,0 +1,234 @@
+/* Variáveis Profissionais */
+:root {
+    --bg-color: #070709; /* Preto muito profundo com toque frio */
+    --surface-color: #121216; /* Superfície levemente mais clara */
+    --text-primary: #e4e4e7; /* Branco suave, não agride os olhos */
+    --text-secondary: #a1a1aa; /* Cinza para textos de apoio */
+    --neon-blue: #00d4ff; /* Azul neon elegante, menos saturado que o ciano puro */
+    --neon-glow: 0 0 10px rgba(0, 212, 255, 0.4);
+    --border-subtle: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif; /* Fonte limpa e profissional */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif; /* Fonte Gótica */
+    font-weight: 500;
+}
+
+/* Header e Navegação */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(7, 7, 9, 0.9);
+    backdrop-filter: blur(10px); /* Efeito de vidro esfumaçado profissional */
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--neon-blue);
+}
+
+/* Seções Gerais */
+.secao {
+    padding: 120px 0;
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    color: var(--neon-blue);
+    margin-bottom: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Hero Section (Sobre) */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+/* Grid de Projetos */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-projeto {
+    background-color: var(--surface-color);
+    border: var(--border-subtle);
+    border-top: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.card-conteudo {
+    padding: 40px 30px;
+}
+
+.card-projeto:hover {
+    transform: translateY(-8px);
+    border-top: 2px solid var(--neon-blue);
+    box-shadow: var(--neon-glow);
+    background-color: #16161a;
+}
+
+.card-projeto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.card-projeto p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.tech-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--neon-blue);
+    background: rgba(0, 212, 255, 0.05);
+    padding: 5px 12px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Botões */
+.btn-neon {
+    display: inline-block;
+    padding: 14px 35px;
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid var(--neon-blue);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+    background-color: rgba(0, 212, 255, 0.1);
+    box-shadow: var(--neon-glow);
+}
+
+.btn-solid {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.btn-solid:hover {
+    background-color: var(--neon-blue);
+    box-shadow: var(--neon-glow);
+}
+
+/* Contato */
+.contato-secao {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato-secao p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    border-top: var(--border-subtle);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
